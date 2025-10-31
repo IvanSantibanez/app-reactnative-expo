@@ -29,3 +29,14 @@ Una vez que el usuario inicia sesión correctamente, se navega a una **pantalla 
 ## 📘 Aprendizajes
 
 Me guié por [reactjs.wiki](https://www.reactjs.wiki/) para aprender sobre el uso de **useEffect**, **useState** y **Context**. , y con **Vibecoding** para manejar estilos en la app.
+
+---
+
+## 🎥 Demo del Proyecto
+
+¿Quieres ver cómo funciona?  
+Haz clic en la imagen para ver el video 👇
+
+[![Ver demo en YouTube](https://img.youtube.com/vi/ti8-qjdpX5U/maxresdefault.jpg)](https://youtube.com/shorts/ti8-qjdpX5U?feature=share)
+
+> 🔗 *Haz clic en la miniatura para reproducir el video en YouTube.*
