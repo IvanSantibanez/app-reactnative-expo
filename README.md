@@ -1,50 +1,31 @@
-# Welcome to your Expo app 👋
+# 🪪 Login
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación de **login simple** desarrollada con **React Native** y **Expo**, que utiliza **Context API** para la gestión de autenticación.  
 
-## Get started
+La aplicación presenta una pantalla de inicio de sesión con validación de correo electrónico y contraseña, y muestra mensajes de error apropiados.  
+Una vez que el usuario inicia sesión correctamente, se navega a una **pantalla de bienvenida**, con opción de ir a la **pantalla de perfil**, donde se muestra el correo electrónico del usuario y se ofrece la posibilidad de **cerrar sesión**.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ⚙️ Características
 
-2. Start the app
+- Pantalla de inicio de sesión con campos para **correo electrónico** y **contraseña**.  
+- Validación de formato de correo electrónico.  
+- Manejo de errores para credenciales incorrectas.  
+- Uso de **Context API** para gestionar el estado de autenticación.  
+- Navegación entre pantallas utilizando **React Navigation**.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 👤 Usuarios de prueba
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Email                   | Contraseña |
+|-------------------------|------------|
+| `usuario.uno@gmail.com` |   `1234`   |
+| `usuario.dos@gmail.com` |   `5678`   |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 📘 Aprendizajes
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Me guié por [reactjs.wiki](https://www.reactjs.wiki/) para aprender sobre el uso de **useEffect**, **useState** y **Context**. , y con **Vibecoding** para manejar estilos en la app.
