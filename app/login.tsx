@@ -1,5 +1,4 @@
 import { useAuth } from "@/context/auth-context";
-import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -9,7 +8,6 @@ const LoginBackground = require("../assets/svg/login-background.svg").default;
 
 
 export default function LoginView() {
-  const router = useRouter();
   const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,7 +26,6 @@ export default function LoginView() {
     try {
       login(email, password);
       setError(null);
-      router.navigate('/(tabs)');
     } catch (error) {
       setError((error as Error).message);
     }

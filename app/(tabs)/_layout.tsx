@@ -12,6 +12,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="todo"
+        options={{
+          title: 'Mis Tareas',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="list-ul" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="profile"
         options={{
           title: 'Perfil',
