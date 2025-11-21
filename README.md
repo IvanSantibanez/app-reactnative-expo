@@ -32,11 +32,4 @@ Me guié por [reactjs.wiki](https://www.reactjs.wiki/) para aprender sobre el us
 
 ---
 
-## 🎥 Demo del Proyecto
 
-¿Quieres ver cómo funciona?  
-Haz clic en la imagen para ver el video 👇
-
-[![Ver demo en YouTube](https://img.youtube.com/vi/ti8-qjdpX5U/maxresdefault.jpg)](https://youtube.com/shorts/ti8-qjdpX5U?feature=share)
-
-> 🔗 *Haz clic en la miniatura para reproducir el video en YouTube.*
