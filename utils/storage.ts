@@ -1,31 +1,48 @@
+// utils/storage.ts
+
 import { Task } from "@/constants/types";
 import { User } from "@/context/auth-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Alert } from 'react-native';
 
 const SESSION_STORAGE_KEY = '@SESSION';
+// CLAVE ESPECÍFICA PARA TODAS LAS TAREAS 
+const TASKS_STORAGE_KEY = '@MyApp:Tasks';
 
 
-export const getData = async (key: string) => {
+// 1. LÓGICA ESPECÍFICA PARA TAREAS (Refactorización de storeData/getData) //
+
+
+/**
+ * Carga el array completo de tareas desde AsyncStorage.
+ */
+export const loadTasksFromStorage = async (): Promise<Task[]> => {
   try {
-    const jsonValue = await AsyncStorage.getItem(key);
+    const jsonValue = await AsyncStorage.getItem(TASKS_STORAGE_KEY);
+    // Retorna el array de Task o un array vacío si no hay datos
     return jsonValue != null ? JSON.parse(jsonValue) : [];
   } catch (e) {
-    console.error('error al obtener la data. ', e);
-    Alert.alert('Ocurrió un error al obtener las tareas');
+    console.error('Error al cargar tareas (loadTasksFromStorage): ', e);
+    // Si hay un error grave, podemos alertar, pero mejor solo loguear para no interrumpir el inicio
+    return [];
   }
 }
 
-export const storeData = async (key: string, value: Task[]) => {
+/**
+ * Guarda el array completo de tareas en la persistencia local.
+ */
+export const saveTasksToStorage = async (tasks: Task[]): Promise<void> => {
   try {
-    const jsonValue = JSON.stringify(value);
-    await AsyncStorage.setItem(key, jsonValue);
+    const jsonValue = JSON.stringify(tasks);
+    await AsyncStorage.setItem(TASKS_STORAGE_KEY, jsonValue);
   } catch (e) {
-    console.log('error al guardar la data. ', e);
-    Alert.alert('Ocurrió un error al guardar la tarea. Vuelva a intentarlo');
-
+    console.error('Error al guardar tareas (saveTasksToStorage): ', e);
+    Alert.alert('Ocurrió un error al guardar las tareas.');
   }
 };
+
+
+
 
 export const saveSessionToStorage = async (sessionData: User) => {
   try {

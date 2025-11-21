@@ -2,6 +2,8 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { AuthProvider } from "../context/auth-context";
+// Importamos el TasksProvider
+import { TasksProvider } from "../context/TasksContext";
 
 export const unstable_settings = {
   anchor: 'login',
@@ -29,10 +31,13 @@ export default function RootLayout() {
 
   return (
     <AuthProvider>
-      <Stack>
-        <Stack.Screen name="login" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
+      { }
+      <TasksProvider>
+        <Stack>
+          <Stack.Screen name="login" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </TasksProvider>
     </AuthProvider>
   );
 }
